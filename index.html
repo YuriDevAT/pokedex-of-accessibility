@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" id="top">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WCAG Success Criteria Explorer</title>
+    <title>{{ title | default('WCAG Success Criteria Explorer') }}</title>
+    <meta property="og:site_name" content="Pokedex of Accessibility - Accessibility First">
+    <meta name="description"
+        content="Level up your accessibility game with the Pokedex of Accessibility, created by Julia Undeutsch">
+    <meta property="og:title" content="Pokedex of Accessibility - Accessibility First">
+    <meta property="og:description"
+        content="Level up your accessibility game with the Pokedex of Accessibility, created by Julia Undeutsch">
+    <meta property="og:image" content="">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:type" content="website">
+    
+    <meta property="og:url" content="pokedexofaccessibility.com">
+    <meta property="og:site_name" content="Pokedex of Accessibility - Accessibility First">
+    <meta name="author" content="Pokedex of Accessibility - Accessibility First">
+    
+    <meta name="twitter:title" content="Pokedex of Accessibility" />
+    <meta name="twitter:url" content="pokedexofaccessibility.com" />
+    <meta name="twitter:card" content="Pokedex of Accessibility - Accessibility First" />
+    <meta name="twitter:description"
+        content="Level up your accessibility game with the Pokedex of Accessibility, created by Julia Undeutsch"
+        data-next-head="" />
+    <meta name="twitter:image" content="/assets/thumbnail.png" data-next-head="" />
+    
+    <link rel="icon" href="/assets/icons/favicon.ico">
+    <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+    
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <meta name="theme-color" content="#B1EBC0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poetsen+One&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+        <style>
+            #play {
+                height: 50px;
+                margin-bottom: 20px;
+                width: 100px;
+            }
+        </style>
+</head>
+<body>
+
+    <header>
+        <h1>Pokedex of Accessibility</h1>
+    </header>
+
+    <main>
+
+<button id="play">▶ Play Music</button>
+
+<div class="tenor-gif-embed" data-postid="24672615" data-share-method="host" data-aspect-ratio="1.10345"
+    data-width="100%"><a href="https://tenor.com/view/pokemon-yellow-game-boy-game-pikachu-jrpg-gif-24672615">Pokemon
+        Yellow Game Boy GIF</a>from <a href="https://tenor.com/search/pokemon+yellow-gifs">Pokemon Yellow GIFs</a></div>
+
+<script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+
+<audio id="bg" src="/opening.mp3" loop preload="auto"></audio>
+<script>
+    document.getElementById("play").addEventListener("click", () => {
+        const bg = document.getElementById("bg");
+        bg.play();
+    });
+</script>
+
+
+    </main>
+
+
+</body>
+</html>
