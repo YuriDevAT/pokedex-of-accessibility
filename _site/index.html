@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" id="top">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home - Vienna Barcamp</title>
+  <meta property="og:site_name" content="Pokedex of Accessibility - Accessibility First">
+  <meta name="description"
+    content="Level up your accessibility game with the Pokedex of Accessibility, created by Julia Undeutsch">
+  <meta property="og:title" content="Pokedex of Accessibility - Accessibility First">
+  <meta property="og:description"
+    content="Level up your accessibility game with the Pokedex of Accessibility, created by Julia Undeutsch">
+  <meta property="og:image" content="/assets/img/logo.png">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:type" content="website">
+
+  <meta property="og:url" content="pokedexofaccessibility.com">
+  <meta property="og:site_name" content="Pokedex of Accessibility - Accessibility First">
+  <meta name="author" content="Julia Undeutsch"> 
+
+  <meta name="twitter:title" content="Pokedex of Accessibility" />
+  <meta name="twitter:url" content="pokedexofaccessibility.com" />
+  <meta name="twitter:card" content="Pokedex of Accessibility - Accessibility First" />
+  <meta name="twitter:description"
+    content="Level up your accessibility game with the Pokedex of Accessibility, created by Julia Undeutsch"
+    data-next-head="" />
+  <meta name="twitter:image" content="/assets/thumbnail.png" data-next-head="" />
+
+  <link rel="icon" href="/assets/img/favicon.ico">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <meta name="theme-color" content="#B1EBC0">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poetsen+One&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <a href="#content" class="skip-link">Skip to content</a>
+  <nav class="navbar" id="home">
+  <div class="nav-container">
+    <a href="#home" class="nav-logo">
+        <h1>Pokedex of Accessibility</h1>
+    </a>
+    <button class="menu-toggle" aria-expanded="false">Menu</button>
+    <ul class="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="intro.html">Intro to Accessibility</a></li>
+      <li><a href="shuffle.html">WCAG Shuffle</a></li>
+      <li><a href="pokemon-cards.html">WCAG Pokémon Cards</a></li>
+    </ul>
+  </div>
+</nav>
+  <main id="content">
+    <div class="container">
+     
+<section id="" class="container">
+   <button id="play">▶ Play Music</button>
+
+  <div class="tenor-gif-embed" data-postid="24672615" data-share-method="host" data-aspect-ratio="1.10345"
+    data-width="100%" style="max-width:500px;position:relative;"><a
+      href="https://tenor.com/view/pokemon-yellow-game-boy-game-pikachu-jrpg-gif-24672615">Pokemon
+      Yellow Game Boy GIF</a>from <a href="https://tenor.com/search/pokemon+yellow-gifs">Pokemon Yellow GIFs</a>
+  </div>
+
+  <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+
+  <audio id="bg" src="/opening.mp3" loop preload="auto"></audio>
+  <script>
+    document.getElementById("play").addEventListener("click", () => {
+      const bg = document.getElementById("bg");
+      bg.play();
+    });
+  </script>
+</section>
+    </div>
+  </main>
+  <footer>
+    <div  class="container">
+        <p>&copy; since 2025 Pokédex of Accessibility. All rights reserved. Created by Julia Undeutsch. </p>
+         <p>A project by Accessibility First</p>
+        <div class="to-the-top">
+            <a href="#site-header">
+                <span class="to-the-top-long">
+                    Nach oben 
+                    <span class="arrow" aria-hidden="true">↑</span>
+                </span>
+                <span class="to-the-top-short">
+                    Hoch 
+                    <span class="arrow" aria-hidden="true">↑</span>
+                </span>
+            </a>
+        </div>
+    </div>
+</footer>
+
+  <script src="/assets/scripts/script.js"></script>
+  <script src="/assets/scripts/card-component.js"></script>
+</body>
+</html>
