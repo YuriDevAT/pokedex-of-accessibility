@@ -45,15 +45,14 @@
   <a href="#content" class="skip-link">Skip to content</a>
   <nav class="navbar" id="home">
   <div class="nav-container">
-    <a href="#home" class="nav-logo">
+    <a href="/" class="nav-logo">
         <h1>Pokedex of Accessibility</h1>
     </a>
     <button class="menu-toggle" aria-expanded="false">Menu</button>
     <ul class="nav-menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="intro.html">Intro to Accessibility</a></li>
-      <li><a href="shuffle.html">WCAG Shuffle</a></li>
-      <li><a href="pokemon-cards.html">WCAG Pokémon Cards</a></li>
+      <li><a href="/">Home</a></li>
+      <li><a href="/shuffle/">WCAG Shuffle</a></li>
+      <li><a href="/wcag-cards/">WCAG Pokémon Cards</a></li>
     </ul>
   </div>
 </nav>
@@ -65,29 +64,23 @@
     <p>Filter WCAG 2.2 Success Criteria (Level A, AA, AAA)</p>
 </div>
 
-    <section id="filter-section">
-        <h2>Filter by Keyword:</h2>
-        <div id="filter-chips-container">
-            <!-- Filter chips will be generated here by JavaScript -->
-        </div>
-        <div id="active-filters-info">
-            Showing results matching: <span id="active-filter-list">None</span>
-        </div>
-    </section>
+<section id="filter-section">
+    <h2>Filter by Keyword:</h2>
+    <div id="filter-chips-container">
+        <!-- Filter chips will be generated here by JavaScript -->
+    </div>
+    <div id="active-filters-info">
+        Showing results matching: <span id="active-filter-list">None</span>
+    </div>
+</section>
 
-    <section id="sc-list-section">
-        <h2>Success Criteria (<span id="sc-count">0</span> found)</h2>
-        <div id="sc-list-container">
-            <!-- Success Criteria cards will be generated here -->
-            <p class="loading-message">Loading criteria...</p>
-        </div>
-    </section>
-
-
-<!-- Load Data FIRST -->
-<script src="data.js"></script>
-<!-- Load Script AFTER Data and HTML -->
-<script src="script.js"></script>
+<section id="sc-list-section">
+    <h2>Success Criteria (<span id="sc-count">0</span> found)</h2>
+    <div id="sc-list-container">
+        <!-- Success Criteria cards will be generated here -->
+        <p class="loading-message">Loading criteria...</p>
+    </div>
+</section>
     </div>
   </main>
   <footer>
@@ -111,5 +104,6 @@
 
   <script src="/assets/scripts/script.js"></script>
   <script src="/assets/scripts/card-component.js"></script>
+  <script src="/_data/data.js"></script>
 </body>
 </html>

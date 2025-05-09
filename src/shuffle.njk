@@ -1,7 +1,6 @@
 ---
 layout: layouts/base.njk
 title: "WCAG Shuffle"
-permalink: /shuffle/
 ---
 
 <div>
@@ -9,26 +8,20 @@ permalink: /shuffle/
     <p>Filter WCAG 2.2 Success Criteria (Level A, AA, AAA)</p>
 </div>
 
-    <section id="filter-section">
-        <h2>Filter by Keyword:</h2>
-        <div id="filter-chips-container">
-            <!-- Filter chips will be generated here by JavaScript -->
-        </div>
-        <div id="active-filters-info">
-            Showing results matching: <span id="active-filter-list">None</span>
-        </div>
-    </section>
+<section id="filter-section">
+    <h2>Filter by Keyword:</h2>
+    <div id="filter-chips-container">
+        <!-- Filter chips will be generated here by JavaScript -->
+    </div>
+    <div id="active-filters-info">
+        Showing results matching: <span id="active-filter-list">None</span>
+    </div>
+</section>
 
-    <section id="sc-list-section">
-        <h2>Success Criteria (<span id="sc-count">0</span> found)</h2>
-        <div id="sc-list-container">
-            <!-- Success Criteria cards will be generated here -->
-            <p class="loading-message">Loading criteria...</p>
-        </div>
-    </section>
-
-
-<!-- Load Data FIRST -->
-<script src="data.js"></script>
-<!-- Load Script AFTER Data and HTML -->
-<script src="script.js"></script>
+<section id="sc-list-section">
+    <h2>Success Criteria (<span id="sc-count">0</span> found)</h2>
+    <div id="sc-list-container">
+        <!-- Success Criteria cards will be generated here -->
+        <p class="loading-message">Loading criteria...</p>
+    </div>
+</section>
