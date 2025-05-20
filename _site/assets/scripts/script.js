@@ -1,7 +1,6 @@
+ // Function to load shared components dynamically into the placeholders
 document.addEventListener('DOMContentLoaded', function() {
-    // Function to load the content dynamically into the placeholders
     function loadContent() {
-        // Load header content
         fetch('header.html')
             .then(response => response.text())
             .then(data => {
@@ -9,34 +8,22 @@ document.addEventListener('DOMContentLoaded', function() {
             })
             .catch(error => console.log('Error loading header:', error));
 
-        // Load footer content
         fetch('footer.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('footer').innerHTML = data;
             })
             .catch(error => console.log('Error loading footer:', error));
-
-        // Optionally, you can add the head content dynamically (not usually done)
-        fetch('head.html')
-            .then(response => response.text())
-            .then(data => {
-                document.head.innerHTML += data;  // Append to the head section
-            })
-            .catch(error => console.log('Error loading head:', error));
     }
-
-    // Load the common content when the page is ready
     loadContent();
 });
 
 
 // shuffle
 document.addEventListener('DOMContentLoaded', () => {
-    // Ensure data is loaded (it should be, as data.js is included before script.js)
     if (typeof wcagData === 'undefined' || typeof filterKeywords === 'undefined') {
         console.error("Error: WCAG data or filter keywords not found. Make sure data.js is loaded correctly.");
-        document.getElementById('sc-list-container').innerHTML = '<p class="no-results-message">Error loading data.</p>';
+        document.getElementById('sc-list-container').innerHTML = '<li class="no-results-message">Error loading data.</li>';
         return;
     }
 
@@ -44,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const scListContainer = document.getElementById('sc-list-container');
     const scCountElement = document.getElementById('sc-count');
     const activeFilterListElement = document.getElementById('active-filter-list');
+    const liveRegion = document.querySelector("[role='status']");
 
     let activeFilters = new Set(); // Use a Set for efficient add/delete/check
 
@@ -66,12 +54,12 @@ document.addEventListener('DOMContentLoaded', () => {
         scListContainer.innerHTML = ''; // Clear loading message or previous results
 
         if (wcagData.length === 0) {
-            scListContainer.innerHTML = '<p class="no-results-message">No Success Criteria data available.</p>';
+            scListContainer.innerHTML = '<li class="no-results-message">No Success Criteria data available.</li>';
             return;
         }
 
         wcagData.forEach(sc => {
-            const card = document.createElement('div');
+            const card = document.createElement('li');
             card.classList.add('sc-card');
             card.dataset.id = sc.id; // Optional: useful for direct linking/reference
 

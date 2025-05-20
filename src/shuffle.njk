@@ -1,27 +1,24 @@
 ---
-layout: layouts/base.njk
+layout: base.njk
 title: "WCAG Shuffle"
 ---
 
 <div>
-    <h1>WCAG <img src="shuffle.png" alt="Shuffle" height="25px" width="150px" /></h1>
+    <h1>WCAG <span class="sr-only">Shuffle</span><img src="/assets/img/shuffle.png" alt="" height="25px" width="150px" /></h1>
     <p>Filter WCAG 2.2 Success Criteria (Level A, AA, AAA)</p>
 </div>
 
 <section id="filter-section">
     <h2>Filter by Keyword:</h2>
-    <div id="filter-chips-container">
-        <!-- Filter chips will be generated here by JavaScript -->
-    </div>
+    <div id="filter-chips-container"></div>
     <div id="active-filters-info">
         Showing results matching: <span id="active-filter-list">None</span>
     </div>
 </section>
 
-<section id="sc-list-section">
-    <h2>Success Criteria (<span id="sc-count">0</span> found)</h2>
-    <div id="sc-list-container">
-        <!-- Success Criteria cards will be generated here -->
+<section id="sc-list-section" aria-labelledby="results_heading" tabindex="-1">
+    <h2 id="results_heading">Success Criteria (<span id="sc-count" role="status">0</span> found)</h2>
+    <ul id="sc-list-container">
         <p class="loading-message">Loading criteria...</p>
-    </div>
+    </ul>
 </section>

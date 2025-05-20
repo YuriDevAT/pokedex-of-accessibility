@@ -347,3 +347,9 @@ const filterKeywords = [
     "robust", "assistive technology", "screen reader", "aria", "programmatic"
     // Add more relevant keywords
 ];
+
+
+module.exports = {
+  wcagData,
+  filterKeywords
+};

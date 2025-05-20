@@ -43,7 +43,9 @@
 
 <body>
   <a href="#content" class="skip-link">Skip to content</a>
+  <header id="site-header">
   {% include "nav.njk" %}
+  </header>
   <main id="content">
     <div class="container">
      {{ content | safe }}
@@ -51,8 +53,17 @@
   </main>
   {% include "footer.njk" %}
 
+  <script>
+    window.wcagData = {{ data.wcagData | dump | safe }};
+    window.filterKeywords = {{ data.filterKeywords | dump | safe }};
+  </script>
+
   <script src="/assets/scripts/script.js"></script>
   <script src="/assets/scripts/card-component.js"></script>
-  <script src="/_data/data.js"></script>
+
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>

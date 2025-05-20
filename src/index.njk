@@ -1,24 +1,44 @@
 ---
-layout: layouts/base.njk
+layout: base.njk
 title: "Home - Pokédex of Accessibility"
 ---
 
 <section id="" class="container">
-   <button id="play">▶ Play Music</button>
-
-  <div class="tenor-gif-embed" data-postid="24672615" data-share-method="host" data-aspect-ratio="1.10345"
-    data-width="100%" style="max-width:500px;position:relative;"><a aria-label="Pokemon Yellow Game Boy Gif Satoshi and Pikachu walking through Safronia City"
-      href="https://tenor.com/view/pokemon-yellow-game-boy-game-pikachu-jrpg-gif-24672615">Pokemon
-      Yellow Game Boy GIF</a>from <a href="https://tenor.com/search/pokemon+yellow-gifs">Pokemon Yellow GIFs</a>
+  <h1>Welcome to the Pokédex of Accessibility</h1>
+  <p>Choose your browsing mode:</p>
+  <p>
+    Just like a classic Pokémon Pokédex helps Trainers learn about each Pokémon’s strengths and abilities, the
+    <b>Pokédex of Accessibility</b> is your go-to reference for mastering WCAG Success Criteria.
+    Browse through every guideline, learn how to implement them, and level up your skills to build truly
+    inclusive web experiences.
+  </p>
+  <div class="buttons">
+    <button type="button" class="btn btn--primary">Pokémon Theme</button>
+    <button type="button" class="btn btn--secondary">Plain Theme</button>
   </div>
+  <h2>Available tools</h2>
+  <div class="buttons">
+    <a href="/shuffle/" class="btn btn--primary">WCAG Shuffle</a>
+    <a href="/wcag-cards/" class="btn btn--secondary">WCAG Cards</a>
+  </div>
+  <h3>Try the WCAG Shuffle</h3>
+  <p>
+    Not sure which Success Criterion to tackle next? The <em>WCAG Shuffle</em> randomly presents you with
+    keywords drawn from the WCAG 2.2 spec. Click on any of the filter chips below to instantly narrow the list
+    down to criteria that mention exactly what you’re looking for:
+  </p>
+  <ol>
+    <li><strong>Pick a Keyword:</strong> Click any chip (e.g. “keyboard,” “contrast,” “transcript”).</li>
+    <li><strong>See Matching Criteria:</strong> Success Criteria cards will filter in real time to show only those that include your selected term.</li>
+    <li><strong>Explore & Learn:</strong> Read the description, “How to Meet,” and “Why It’s Important” for each card to get practical guidance.</li>
+  </ol>
 
-  <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+  <p>
+    Ready to shuffle? Hit the <a href="/shuffle/" class="btn btn--primary">WCAG Shuffle</a> button below and start discovering!
+  </p>
 
-  <audio id="bg" src="/opening.mp3" loop preload="auto"></audio>
-  <script>
-    document.getElementById("play").addEventListener("click", () => {
-      const bg = document.getElementById("bg");
-      bg.play();
-    });
-  </script>
 </section>
+
+
+
+
