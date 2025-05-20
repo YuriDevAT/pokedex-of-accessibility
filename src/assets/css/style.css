@@ -108,9 +108,9 @@ a:hover,
     z-index: 1000;
 }
 
-.navbar.small {
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    padding: 0.3rem 0;
+.nav-logo {
+    display: flex;
+    align-items: center;
 }
 
 .nav-container {
@@ -121,17 +121,6 @@ a:hover,
     max-width: 1000px;
     padding: 0 1rem;
     transition: padding 0.3s ease;
-}
-
-.nav-logo img {
-    height: auto;
-    transition: width 0.3s ease;
-    width: 350px;
-}
-
-.navbar.small .nav-logo img {
-    height: auto;
-    width: 150px;
 }
 
 /* Menu links */

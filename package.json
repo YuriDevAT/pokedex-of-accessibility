@@ -1,15 +1,15 @@
 {
-  "name": "pokedex",
+  "name": "pokedex-of-accessibility",
   "version": "1.0.0",
-  "description": "",
-  "main": "card-component.js",
+  "description": "WCAG learning tool created by Julia Undeutsch.",
+  "author": "Julia Undeutsch",
+  "homepage": "https://pokedex-of-accessibility.com/",
+  "keywords": [],
   "scripts": {
     "build": "eleventy",
     "start": "eleventy --serve"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0"
   }
