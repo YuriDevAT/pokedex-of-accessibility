@@ -1,4 +1,3 @@
-// data.js
 const wcagData = [
   {
     id: "1.1.1",
@@ -320,33 +319,638 @@ const wcagData = [
     keywords: ["hover", "focus", "tooltip", "overlay", "dismissible", "keyboard"]
   },
   {
+    id: "2.1.1",
+    name: "Keyboard",
+    level: "A",
+    principle: "2. Operable",
+    guideline: "2.1 Keyboard Accessible",
+    description: "All functionality of the content is operable through a keyboard interface without requiring specific timings for individual keystrokes.",
+    howToMeet: "Ensure all interactive elements are keyboard accessible; use semantic HTML and avoid custom controls that only respond to mouse or touch.",
+    whyImportant: "Users who cannot use a mouse—due to visual, mobility, or other impairments—must still be able to fully operate the interface via keyboard or keyboard-emulating assistive technologies.",
+    keywords: ["keyboard", "tab", "keyboard interface", "accessibility", "focus"]  
+  },
+  {
+    id: "2.1.2",
+    name: "No Keyboard Trap",
+    level: "A",
+    principle: "2. Operable",
+    guideline: "2.1 Keyboard Accessible",
+    description: "If keyboard focus can be moved to a component, focus can also be moved away using only the keyboard.",
+    howToMeet: "Ensure custom widgets don’t trap focus; provide clear instructions if non-standard keys are needed to exit a focus area.",
+    whyImportant: "Prevents keyboard users from getting 'stuck' and unable to navigate away from interactive components.",
+    keywords: ["keyboard trap", "focus", "navigation", "instructions"]  
+  },
+  {
+    id: "2.1.3",
+    name: "Keyboard (No Exception)",
+    level: "AAA",
+    principle: "2. Operable",
+    guideline: "2.1 Keyboard Accessible",
+    description: "All content functionality is operable through a keyboard interface without exception.",
+    howToMeet: "Even path-dependent interactions (e.g., drawing tools) must provide keyboard equivalents for all functionality.",
+    whyImportant: "Maximizes inclusivity by ensuring keyboard access even for complex features.",
+    keywords: ["keyboard", "AAA", "accessibility", "no exceptions"]  
+  },
+  {
+    id: "2.1.4",
+    name: "Character Key Shortcuts",
+    level: "A",
+    principle: "2. Operable",
+    guideline: "2.1 Keyboard Accessible",
+    description: "If character key shortcuts are implemented, users can turn them off, remap them, or use them only when the component has focus.",
+    howToMeet: "Provide users with customization or disable options for single-key shortcuts unless essential.",
+    whyImportant: "Prevents unexpected behaviors and conflicts with assistive input methods.",
+    keywords: ["keyboard shortcuts", "accessibility", "remap", "disable"]  
+  },
+  {
+    id: "2.2.1",
+    name: "Timing Adjustable",
+    level: "A",
+    principle: "2. Operable",
+    guideline: "2.2 Enough Time",
+    description: "For time limits, users can turn off, adjust, or extend them by at least ten times the default.",
+    howToMeet: "Allow users to control time limits or halt timed interactions.",
+    whyImportant: "Supports users who may need more time due to cognitive, motor, or visual impairments.",
+    keywords: ["timeout", "extend time", "adjustable", "accessibility"]  
+  },
+  {
+    id: "2.2.2",
+    name: "Pause, Stop, Hide",
+    level: "A",
+    principle: "2. Operable",
+    guideline: "2.2 Enough Time",
+    description: "Users can pause, stop, or hide moving, blinking, or scrolling content that lasts more than five seconds.",
+    howToMeet: "Provide pause/play controls on carousels, marquees, animations.",
+    whyImportant: "Prevents seizures and supports those with cognitive or sensory processing issues.",
+    keywords: ["pause", "stop", "hide", "animation", "movement"]  
+  },
+  {
+    id: "2.2.3",
+    name: "No Timing",
+    level: "A",
+    principle: "2. Operable",
+    guideline: "2.2 Enough Time",
+    description: "If timing is not essential, no a time limit is set.",
+    howToMeet: "Remove unnecessary time constraints.",
+    whyImportant: "Reduces pressure on users who may need extra time to understand or act.",
+    keywords: ["timing", "no time limit", "accessibility"]  
+  },
+  {
+    id: "2.2.4",
+    name: "Interruptions",
+    level: "A",
+    principle: "2. Operable",
+    guideline: "2.2 Enough Time",
+    description: "Interruptions (e.g., alerts) can be postponed or suppressed unless essential.",
+    howToMeet: "Provide user controls for pausing or disabling interruptions.",
+    whyImportant: "Prevents loss of control and disorientation.",
+    keywords: ["interruptions", "pause", "alerts", "accessibility"]  
+  },
+  {
+    id: "2.2.5",
+    name: "Re-authenticating",
+    level: "A",
+    principle: "2. Operable",
+    guideline: "2.2 Enough Time",
+    description: "When sessions expire, users can continue from where they left off after re-authenticating within the same service.",
+    howToMeet: "Maintain form data and state after login timeouts.",
+    whyImportant: "Prevents data loss and frustration for users returning after a timeout.",
+    keywords: ["session timeout", "login", "accessibility"]  
+  },
+  {
+    id: "2.2.6",
+    name: "Timeouts",
+    level: "AAA",
+    principle: "2. Operable",
+    guideline: "2.2 Enough Time",
+    description: "If content times out, users can extend it without losing work, by at least 20‑times the default.",
+    howToMeet: "Prompt users before timeout and allow extension.",
+    whyImportant: "Supports users who may need much longer to complete tasks.",
+    keywords: ["timeout", "extend", "AAA", "accessibility"]  
+  },
+  {
+    id: "2.3.1",
+    name: "Three Flashes or Below Threshold",
+    level: "A",
+    principle: "2. Operable",
+    guideline: "2.3 Seizures and Physical Reactions",
+    description: "Content doesn’t flash more than three times per second or at harmful intensities.",
+    howToMeet: "Limit flashing; adhere to flash thresholds.",
+    whyImportant: "Protects users with photosensitive epilepsy.",
+    keywords: ["flashing", "seizure", "threshold", "safety"]  
+  },
+  {
+    id: "2.3.2",
+    name: "Flash (No Exception)",
+    level: "AAA",
+    principle: "2. Operable",
+    guideline: "2.3 Seizures and Physical Reactions",
+    description: "Content does not flash at all.",
+    howToMeet: "Avoid all flashing content.",
+    whyImportant: "Further eliminates seizure risk.",
+    keywords: ["flash", "AAA", "accessibility"]  
+  },
+  {
+    id: "2.3.3",
+    name: "Animation from Interactions",
+    level: "AAA",
+    principle: "2. Operable",
+    guideline: "2.3 Seizures and Physical Reactions",
+    description: "Animations triggered by user interaction can be disabled or have no more than three flashes per second.",
+    howToMeet: "Allow toggling off animations or ensure low flash frequency.",
+    whyImportant: "Reduces vestibular issues and photosensitive triggers.",
+    keywords: ["animation", "disable", "flashing", "AAA"]  
+  },
+  {
+    id: "2.4.1",
+    name: "Bypass Blocks",
+    level: "A",
+    principle: "2. Operable",
+    guideline: "2.4 Navigable",
+    description: "A way is available to bypass repetitive blocks of content.",
+    howToMeet: "Provide skip links to main content.",
+    whyImportant: "Reduces navigation effort for keyboard and screen reader users.",
+    keywords: ["skip link", "navigation", "accessibility"]  
+  },
+  {
+    id: "2.4.2",
+    name: "Page Titled",
+    level: "A",
+    principle: "2. Operable",
+    guideline: "2.4 Navigable",
+    description: "Web pages have descriptive titles that can be programmatically determined.",
+    howToMeet: "Use unique and meaningful `<title>` elements.",
+    whyImportant: "Helps users locate and identify content in tabs or history.",
+    keywords: ["title", "navigation", "accessibility"]  
+  },
+  {
+    id: "2.4.3",
+    name: "Focus Order",
+    level: "A",
+    principle: "2. Operable",
+    guideline: "2.4 Navigable",
+    description: "Focusable components follow a logical order that preserves meaning.",
+    howToMeet: "Ensure tab order matches visual layout.",
+    whyImportant: "Supports keyboard navigation and comprehension.",
+    keywords: ["focus", "tab order", "keyboard", "accessibility"]  
+  },
+  {
+    id: "2.4.4",
+    name: "Link Purpose (In Context)",
+    level: "A",
+    principle: "2. Operable",
+    guideline: "2.4 Navigable",
+    description: "The purpose of each link is clear from link text alone or with surrounding context.",
+    howToMeet: "Write descriptive anchor text.",
+    whyImportant: "Helps users, including those using assistive tech, know where a link goes.",
+    keywords: ["links", "descriptive", "anchor text", "accessibility"]  
+  },
+  {
+    id: "2.4.5",
+    name: "Multiple Ways",
+    level: "AA",
+    principle: "2. Operable",
+    guideline: "2.4 Navigable",
+    description: "More than one way is available to locate a page within a set of pages.",
+    howToMeet: "Include navigation menus, search, sitemap.",
+    whyImportant: "Assists users who navigate differently (e.g., screen reader users).",
+    keywords: ["navigation", "search", "menu", "sitemap"]  
+  },
+  {
+    id: "2.4.6",
+    name: "Headings and Labels",
+    level: "AA",
+    principle: "2. Operable",
+    guideline: "2.4 Navigable",
+    description: "Headings and labels describe topic or purpose.",
+    howToMeet: "Use meaningful headings, form labels.",
+    whyImportant: "Improves orientation and usability.",
+    keywords: ["headings", "labels", "navigation", "accessibility"]  
+  },
+  {
     id: "2.4.7",
     name: "Focus Visible",
     level: "AA",
     principle: "2. Operable",
     guideline: "2.4 Navigable",
-    description: "Any keyboard operable user interface has a mode of operation where the keyboard focus indicator is visible.",
-    howToMeet: "Ensure that when an element receives keyboard focus (e.g., via Tab key), a visible outline or highlight appears around it. Avoid using CSS like `outline: none;` without providing an alternative visible focus style.",
-    whyImportant: "Allows keyboard users (including those with mobility impairments and screen reader users) to visually track which element currently has focus and is ready to be interacted with.",
-    keywords: ["focus", "keyboard", "navigation", "visible", "outline", "highlight", "indicator", "operable"]
+    description: "A visible keyboard focus indicator is present on all keyboard-operable UI elements.",
+    howToMeet: "Ensure focus styles are visible and persistent.",
+    whyImportant: "Helps users track focus during keyboard navigation.",
+    keywords: ["focus", "visibility", "keyboard", "indicator"]  
   },
-  // ... Add all 86 Success Criteria here
+  {
+    id: "2.4.8",
+    name: "Location",
+    level: "AA",
+    principle: "2. Operable",
+    guideline: "2.4 Navigable",
+    description: "Users are informed of their location within a set of pages.",
+    howToMeet: "Provide breadcrumbs, page numbers, or location indicators.",
+    whyImportant: "Supports spatial awareness and navigation.",
+    keywords: ["breadcrumbs", "current page", "navigation", "location"]  
+  },
+  {
+    id: "2.4.9",
+    name: "Link Purpose (Link Only)",
+    level: "AAA",
+    principle: "2. Operable",
+    guideline: "2.4 Navigable",
+    description: "Link purpose is clear from the link text alone.",
+    howToMeet: "Write self-contained, descriptive links.",
+    whyImportant: "Ensures clarity without needing extra context.",
+    keywords: ["links", "descriptive", "AAA", "accessibility"]  
+  },
+  {
+    id: "2.4.10",
+    name: "Section Headings",
+    level: "AAA",
+    principle: "2. Operable",
+    guideline: "2.4 Navigable",
+    description: "Section headings are provided to organize content.",
+    howToMeet: "Use headings to break up long content.",
+    whyImportant: "Improves comprehension and navigation.",
+    keywords: ["headings", "structure", "AAA", "accessibility"]  
+  },
+  {
+    id: "2.4.11",
+    name: "Focus Not Obscured (Minimum)",
+    level: "AA",
+    principle: "2. Operable",
+    guideline: "2.4 Navigable",
+    description: "Focused elements are not hidden by other content and remain visible when focused.",
+    howToMeet: "Ensure overlays do not cover focus indicator; provide visible focus area.",
+    whyImportant: "Maintains keyboard navigation visibility and orientation.",
+    keywords: ["focus", "visibility", "navigation", "2.2 update"]  
+  },
+  {
+    id: "2.4.12",
+    name: "Focus Not Obscured (Enhanced)",
+    level: "AAA",
+    principle: "2. Operable",
+    guideline: "2.4 Navigable",
+    description: "Focused element and its focus indicator are fully visible; not clipped or obscured.",
+    howToMeet: "Prevent any overlap or clipping of focus indicators.",
+    whyImportant: "Enhances visibility for low-vision users.",
+    keywords: ["focus", "full visibility", "AAA", "navigation"]  
+  },
+  {
+    id: "2.4.13",
+    name: "Focus Appearance",
+    level: "AAA",
+    principle: "2. Operable",
+    guideline: "2.4 Navigable",
+    description: "Focus indicators have a minimum area, contrast, and thickness.",
+    howToMeet: "Design focus with clear borders, sufficient size (≥1 CSS pixel), and contrast (≥3:1).",
+    whyImportant: "Improves visibility of interactive elements for keyboard users.",
+    keywords: ["focus", "contrast", "thickness", "AAA", "navigation"]  
+  },
+  {
+    id: "2.5.1",
+    name: "Pointer Gestures",
+    level: "A",
+    principle: "2. Operable",
+    guideline: "2.5 Input Modalities",
+    description: "All functionality that uses multipoint or path-based gestures can also be operated with a single pointer.",
+    howToMeet: "Provide tap alternatives to swipe or pinch gestures.",
+    whyImportant: "Supports users unable to perform complex gestures.",
+    keywords: ["gestures", "touch", "tap", "accessibility"]  
+  },
+  {
+    id: "2.5.2",
+    name: "Pointer Cancellation",
+    level: "A",
+    principle: "2. Operable",
+    guideline: "2.5 Input Modalities",
+    description: "Pointer down events do not trigger immediate actions; completion events are required.",
+    howToMeet: "Use completion events (e.g., touchend) or allow undo within 2 seconds.",
+    whyImportant: "Prevents accidental activations.",
+    keywords: ["touch", "pointer", "cancellation", "undo"]  
+  },
+  {
+    id: "2.5.3",
+    name: "Label in Name",
+    level: "A",
+    principle: "2. Operable",
+    guideline: "2.5 Input Modalities",
+    description: "Label text is included in the accessible name of the control.",
+    howToMeet: "Ensure visible labels match ARIA names.",
+    whyImportant: "Creates consistency between visual and programmatic names.",
+    keywords: ["ARIA", "label", "accessible name", "touchscreen"]  
+  },
+  {
+    id: "2.5.4",
+    name: "Motion Actuation",
+    level: "A",
+    principle: "2. Operable",
+    guideline: "2.5 Input Modalities",
+    description: "Functionality triggered by motion (e.g., shaking device) must also be operable without motion.",
+    howToMeet: "Provide alternative inputs like buttons or switches.",
+    whyImportant: "Supports users who can’t perform motion gestures.",
+    keywords: ["motion", "gesture", "alternative", "accessibility"]  
+  },
+  {
+    id: "2.5.5",
+    name: "Target Size",
+    level: "A",
+    principle: "2. Operable",
+    guideline: "2.5 Input Modalities",
+    description: "On touch devices, targets must be at least 44×44 CSS pixels unless certain spacing is maintained.",
+    howToMeet: "Ensure touch targets are large enough or properly spaced.",
+    whyImportant: "Reduces activation difficulty for users with motor impairments.",
+    keywords: ["touch", "target size", "44px", "spaced"]  
+  },
+  {
+    id: "2.5.6",
+    name: "Concurrent Input Mechanisms",
+    level: "A",
+    principle: "2. Operable",
+    guideline: "2.5 Input Modalities",
+    description: "All functionality available by pointer is also available by keyboard.",
+    howToMeet: "Provide both pointer and keyboard interaction for every control.",
+    whyImportant: "Ensures multiple input method accessibility.",
+    keywords: ["pointer", "keyboard", "concurrent", "accessibility"]  
+  },
+  {
+    id: "2.5.7",
+    name: "Dragging Movements",
+    level: "AA",
+    principle: "2. Operable",
+    guideline: "2.5 Input Modalities",
+    description: "Functions requiring dragging can also be completed by tap, arrow keys, or other input.",
+    howToMeet: "Provide alternatives to drag interactions.",
+    whyImportant: "Supports users with limited dexterity or motor control.",
+    keywords: ["drag", "alternative", "tap", "accessibility", "WCAG 2.2"]  
+  },
+  {
+    id: "2.5.8",
+    name: "Target Size (Minimum)",
+    level: "AA",
+    principle: "2. Operable",
+    guideline: "2.5 Input Modalities",
+    description: "Targets are at least 24×24 CSS pixels (non-text essential interaction).",
+    howToMeet: "Ensure essential UI targets meet minimum size.",
+    whyImportant: "Enhances touch accuracy on mobile devices.",
+    keywords: ["touch", "minimum size", "24px", "WCAG 2.2"]  
+  },  
+  {
+    id: "3.1.1",
+    name: "Language of Page",
+    level: "A",
+    principle: "2. Understandable",
+    guideline: "3.1 Readable",
+    description: "The default human language of each Web page can be programmatically determined.",
+    howToMeet: "Use the `lang` attribute on the `<html>` element (e.g., `<html lang=\"en\">`).",
+    whyImportant: "Ensures screen readers and translation tools interpret text correctly.",
+    keywords: ["language", "lang attribute", "screen reader", "translation"]
+  },
+  {
+    id: "3.1.2",
+    name: "Language of Parts",
+    level: "AA",
+    principle: "2. Understandable",
+    guideline: "3.1 Readable",
+    description: "The human language of each passage or phrase in the content can be programmatically determined.",
+    howToMeet: "Use `lang` attributes on elements when the language changes (e.g., `<p lang=\"fr\">Bonjour</p>`).",
+    whyImportant: "Helps users who rely on language-specific pronunciation or translation.",
+    keywords: ["language change", "lang attribute", "translation"]
+  },
+  {
+    id: "3.1.3",
+    name: "Unusual Words",
+    level: "AAA",
+    principle: "2. Understandable",
+    guideline: "3.1 Readable",
+    description: "A mechanism is available for identifying definitions of words or phrases used unusually.",
+    howToMeet: "Provide definitions via tooltips, glossary links, the `abbr` element, etc.",
+    whyImportant: "Aids users unfamiliar with jargon, idioms, or domain-specific terms.",
+    keywords: ["jargon", "glossary", "abbr", "definitions", "unusual words"]
+  },
+  {
+    id: "3.1.4",
+    name: "Abbreviations",
+    level: "AAA",
+    principle: "2. Understandable",
+    guideline: "3.1 Readable",
+    description: "A mechanism for identifying the expanded form of abbreviations is available.",
+    howToMeet: "Mark abbreviations properly (e.g., `<abbr title=\"World Health Organization\">WHO</abbr>`).",
+    whyImportant: "Helps users understand shortened or coded phrases.",
+    keywords: ["abbr", "abbreviation", "expansion"]
+  },
+  {
+    id: "3.1.5",
+    name: "Reading Level",
+    level: "AAA",
+    principle: "2. Understandable",
+    guideline: "3.1 Readable",
+    description: "If content requires advanced reading ability, a simpler version or summary is available.",
+    howToMeet: "Include summaries or simplified versions for complex content.",
+    whyImportant: "Supports users with cognitive disabilities or low literacy.",
+    keywords: ["reading level", "simplified text", "summary"]
+  },
+  {
+    id: "3.1.6",
+    name: "Pronunciation",
+    level: "AAA",
+    principle: "2. Understandable",
+    guideline: "3.1 Readable",
+    description: "A mechanism is available for identifying pronunciation of words where meaning is ambiguous.",
+    howToMeet: "Provide phonetic pronunciation guidance or audio.",
+    whyImportant: "Aids comprehension for screen reader users or second-language learners.",
+    keywords: ["pronunciation", "phonetics", "screen reader"]
+  },
+  {
+    id: "3.2.1",
+    name: "On Focus",
+    level: "A",
+    principle: "2. Understandable",
+    guideline: "3.2 Predictable",
+    description: "When any component receives focus, it does not initiate a change of context.",
+    howToMeet: "Avoid navigation or pop-ups appearing on focus without user initiation.",
+    whyImportant: "Prevents users from being disoriented or losing their place unexpectedly.",
+    keywords: ["focus", "context change", "navigation", "focusable"]
+  },
+  {
+    id: "3.2.2",
+    name: "On Input",
+    level: "A",
+    principle: "2. Understandable",
+    guideline: "3.2 Predictable",
+    description: "Changing the setting of user interface component does not automatically cause a change of context unless the user was warned.",
+    howToMeet: "Provide warnings or require explicit submission before context changes.",
+    whyImportant: "Helps users avoid unexpected navigation or state changes.",
+    keywords: ["input", "submit", "context change", "warning"]
+  },
+  {
+    id: "3.2.3",
+    name: "Consistent Navigation",
+    level: "AA",
+    principle: "2. Understandable",
+    guideline: "3.2 Predictable",
+    description: "Navigational mechanisms that are repeated on multiple pages occur in the same relative order.",
+    howToMeet: "Maintain consistent menu structure and placement across pages.",
+    whyImportant: "Helps users build and maintain orientation within the site.",
+    keywords: ["navigation", "menus", "consistency"]
+  },
+  {
+    id: "3.2.4",
+    name: "Consistent Identification",
+    level: "AA",
+    principle: "2. Understandable",
+    guideline: "3.2 Predictable",
+    description: "Components with the same functionality are identified consistently.",
+    howToMeet: "Use consistent wording, icons, or design patterns for common elements.",
+    whyImportant: "Prevents confusion and improves predictability.",
+    keywords: ["icons", "labels", "consistency", "UI"]
+  },
+  {
+    id: "3.2.5",
+    name: "Change on Request",
+    level: "AA",
+    principle: "2. Understandable",
+    guideline: "3.2 Predictable",
+    description: "Changes of context occur only when requested by the user.",
+    howToMeet: "Avoid sudden page refreshes, modal pop-ups, or dynamic content without user initiation.",
+    whyImportant: "Prevents disruption of user workflow and confusion.",
+    keywords: ["context change", "dynamic content", "user control"]
+  },
+  {
+    id: "3.2.6",
+    name: "Consistent Help",
+    level: "A",
+    principle: "2. Understandable",
+    guideline: "3.2 Predictable",
+    description: "Help mechanisms for functions (e.g., form validation) are available and consistent.",
+    howToMeet: "Ensure help is consistently located and labeled across pages.",
+    whyImportant: "Supports users in finding assistance reliably.",
+    keywords: ["help", "form validation", "instructions", "consistency"]
+  },
+  {
+    id: "3.3.1",
+    name: "Error Identification",
+    level: "A",
+    principle: "2. Understandable",
+    guideline: "3.3 Input Assistance",
+    description: "If an input error is automatically detected, the item that is in error is identified and described to the user in text.",
+    howToMeet: "Display clear error messages near the problematic fields.",
+    whyImportant: "Supports users in correcting mistakes efficiently.",
+    keywords: ["error", "form", "validation", "error message"]
+  },
+  {
+    id: "3.3.2",
+    name: "Labels or Instructions",
+    level: "A",
+    principle: "2. Understandable",
+    guideline: "3.3 Input Assistance",
+    description: "Labels or instructions are provided when content requires user input.",
+    howToMeet: "Use clear labels and helper text for all form fields.",
+    whyImportant: "Prevents user errors and aids successful completion.",
+    keywords: ["labels", "instructions", "form", "input"]
+  },
+  {
+    id: "3.3.3",
+    name: "Error Suggestion",
+    level: "AA",
+    principle: "2. Understandable",
+    guideline: "3.3 Input Assistance",
+    description: "Suggestions for correction are provided when an input error is detected.",
+    howToMeet: "Offer suggestions to fix the error (e.g., 'Did you mean…?').",
+    whyImportant: "Helps users recover from input mistakes.",
+    keywords: ["suggestion", "error recovery", "form"]
+  },
+  {
+    id: "3.3.4",
+    name: "Error Prevention (Legal, Financial, Data)",
+    level: "AA",
+    principle: "2. Understandable",
+    guideline: "3.3 Input Assistance",
+    description: "For submissions that have legal or financial consequences, users can review, correct, and confirm before finalizing.",
+    howToMeet: "Implement preview before submit or undo options.",
+    whyImportant: "Reduces impact of mistakes in critical transactions.",
+    keywords: ["review", "confirm", "undo", "form submission"]
+  },
+  {
+    id: "3.3.5",
+    name: "Help",
+    level: "AAA",
+    principle: "2. Understandable",
+    guideline: "3.3 Input Assistance",
+    description: "Contextual help (e.g., glossary, guidance) is available for understanding and completing content.",
+    howToMeet: "Provide inline help, guides, or links to documentation.",
+    whyImportant: "Assists users who need additional explanation or guidance.",
+    keywords: ["help", "guidance", "instructions", "glossary"]
+  },
+  {
+    id: "3.3.6",
+    name: "Error Prevention (All)",
+    level: "AAA",
+    principle: "2. Understandable",
+    guideline: "3.3 Input Assistance",
+    description: "For all user-submitted data, users can review, correct, and confirm before finalizing actions.",
+    howToMeet: "Offer previews and undo options for all form submissions.",
+    whyImportant: "Minimizes errors and supports user control.",
+    keywords: ["preview", "undo", "form", "submission"]
+  },
+  {
+    id: "3.3.7",
+    name: "Redundant Entry",
+    level: "A",
+    principle: "2. Understandable",
+    guideline: "3.3 Input Assistance",
+    description: "Users are not required to re-enter information that has already been provided.",
+    howToMeet: "Save and prefill information where appropriate.",
+    whyImportant: "Reduces repetitive tasks, especially on multi-page forms.",
+    keywords: ["prefill", "data entry", "user convenience"]
+  },
+  {
+    id: "3.3.8",
+    name: "Accessible Authentication (Minimum)",
+    level: "AA",
+    principle: "2. Understandable",
+    guideline: "3.3 Input Assistance",
+    description: "When authentication (like passwords) is required, at least one accessible authentication mechanism is available.",
+    howToMeet: "Provide password reset, password reveal controls, and alternatives to non-text auth.",
+    whyImportant: "Ensures users with disabilities can log in successfully.",
+    keywords: ["authentication", "password", "reset", "password reveal"]
+  },
+  {
+    id: "3.3.9",
+    name: "Accessible Authentication (Enhanced)",
+    level: "AAA",
+    principle: "2. Understandable",
+    guideline: "3.3 Input Assistance",
+    description: "When taking steps to authenticate, accessibility is enhanced (e.g., no cognitive load, providing alternatives).",
+    howToMeet: "Use simplified auth, avoid cognitive complexities, provide non-cognitive alternatives.",
+    whyImportant: "Supports users with cognitive or memory challenges.",
+    keywords: ["authentication", "cognitive load", "simplified login"]
+  },
+  {
+    id: "4.1.2",
+    name: "Name, Role, Value",
+    level: "A",
+    principle: "4. Robust",
+    guideline: "4.1 Compatible",
+    description: "For all user interface components, the name and role can be programmatically determined; states and properties can be set and notified to user agents, and notifications of changes in state are provided.",
+    howToMeet: "Use standard HTML markup or ARIA attributes (e.g., aria-label, role, aria-checked) so assistive technologies can access name, role, and value.",
+    whyImportant: "Ensures compatibility with assistive technologies, like screen readers, by exposing necessary component information.",
+    keywords: ["ARIA", "role", "name", "value", "state", "accessibility API"]
+  },
+  {
+    id: "4.1.3",
+    name: "Status Messages",
+    level: "AA",
+    principle: "4. Robust",
+    guideline: "4.1 Compatible",
+    description: "Status messages (e.g., success notifications, error alerts, progress updates) can be programmatically determined without requiring focus changes.",
+    howToMeet: "Use ARIA live regions (e.g., role=\"status\" or aria-live) to announce changes without moving focus.",
+    whyImportant: "Helps users of assistive technologies receive critical updates without disruption to their workflow.",
+    keywords: ["status message", "aria-live", "role=status", "notification", "assistive technology"]
+  }
 ];
 
 // --- Define the keywords for filter chips ---
-// You can curate this list based on common search terms or extract dynamically later
-const filterKeywords = [
-    "text alternative", "image", "audio", "video", "caption", "transcript",
-    "semantic html", "structure", "headings", "lists", "tables", "forms", "label",
-    "color", "contrast", "color contrast", "distinguish", "resize text", "reflow",
-    "keyboard", "focus", "visible", "navigation", "link", "operable", "no keyboard trap",
-    "timing", "pause", "stop", "hide", "animation", "moving content",
-    "seizures", "flashing", "bypass blocks", "page title", "link purpose",
-    "headings", "labels", "language", "predictable", "on focus", "on input",
-    "error identification", "error suggestion", "error prevention", "parsing",
-    "robust", "assistive technology", "screen reader", "aria", "programmatic"
-    // Add more relevant keywords
-];
+const filterKeywords = Array.from(
+  new Set(wcagData.flatMap(item => item.keywords))
+).sort();
 
 
 module.exports = {
