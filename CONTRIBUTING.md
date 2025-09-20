@@ -1,9 +1,50 @@
-## How to contribute
+# Contributing Guide
+
+## Issues & Pull Requests
+
+### Creating an Issue
+
+Before **creating** an Issue for `features`/`bugs`/`improvements` please follow these steps:
+
+1. search existing Issues before creating a new issue (has someone raised this already)
+1. if it doesn't exist create a new issue giving as much context as possible (please select the correct Issue type, for example `bug` or `feature`)
+1. all Issues are automatically given the label `status: waiting for triage` and are automatically locked so no comments can be made
+1. if you wish to work on the Issue once it has been triaged and label changed to `status: ready for dev`, please include this in your Issue description
+
+### Working on an Issue (get it assigned to you)
+
+Before working on an existing Issue please follow these steps:
+
+1. only ask to be assigned 1 **open** issue at a time
+1. look out for the Issue label `status: ready for dev` (if it does not have this label, your work might not be accepted)
+1. comment asking for the issue to be assigned to you
+1. after the Issue is assigned to you, you can start working on it
+1. **only** start working on this Issue (and open a Pull Request) when it has been assigned to you - this will prevent confusion, multiple people working on the same issue and work not being used
+1. reference the Issue in your Pull Request (for example `closes #123`)
+1. please do **not** force push to your PR branch, this makes it very difficult to re-review - commits will be squashed when merged
+
+> Notes:
+>
+> - it is not sustainable for maintainers to review historical comments asking for assignments before the Issue label `status: ready for dev` was added; only requests for assignment of an Issue after this label has been added will be considered
+> - check the `Assignees` box at the top of the page to see if the issue has been assigned to someone else before requesting this be assigned to you
+> - if an Issue is unclear, ask questions to get more clarity before asking to have the Issue assigned to you
+> - only request to be assigned an Issue if you know how to work on it
+> - an Issue can be assigned to multiple people, if you all agree to collaborate on the issue (the Pull Request can contain commits from different collaborators)
+> - any Issues that have no activity after 2 weeks will be unassigned and re-assigned to someone else
+
+## Reviewing Pull Requests
+
+I will review the PR as soon as time allows. Please refrain from notifying me that you opened a PR.
+
+## Tech Stack
+
+Pokedex of accessibility ist created using [Eleventy](https://www.11ty.dev/).
 
 ### Prerequisites
 
-If you don't have git on your machine, [install it](https://help.github.com/articles/set-up-git/).
-If you don't have node on your machine, [install it](https://nodejs.org/en/download/).
+Before contributing or adding a new feature, please make sure you have already installed the following tools:
+
+- NodeJS (version 18 or newer) [install NodeJS](https://nodejs.org/en/download/).
 
 ### Fork this repository
 
@@ -25,17 +66,17 @@ where "url you just copied" (without the quotation marks) is the url to this rep
 For example:
 
 ```
-git clone https://github.com/this-is-you/dev-cv.git
+git clone https://github.com/this-is-you/pokedex-of-accessibility.git
 ```
 
-where `this-is-you` is your GitHub username. Here you're copying the contents of the dev-cv repository on GitHub to your computer.
+where `this-is-you` is your GitHub username. Here you're copying the contents of the pokedex-of-accessibility repository on GitHub to your computer.
 
 ### Create a branch
 
 Change to the repository directory on your computer (if you are not already there):
 
 ```
-cd dev-cv
+cd pokedex-of-accessibility
 ```
 
 Open the project in Visual Studio Code (or your favorite code editor):
