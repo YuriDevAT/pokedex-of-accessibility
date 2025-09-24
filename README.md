@@ -23,9 +23,9 @@ Tired of endlessly scrolling through documentation to find the one guideline you
 
 The Shuffle makes it easy to:
 
-- Solve Specific Problems: Working on a login form? Click the Forms and Authentication chips to see every relevant guideline.
-- Find Criteria Quickly: The active filters help you "shuffle" the deck and bring the exact card you need to the top.
-- Learn Contextually: Discover how different concepts are related by combining filters and seeing which criteria apply across multiple categories.
+- **Solve Specific Problems:** Working on a login form? Click the Forms and Authentication chips to see every relevant guideline.
+- **Find Criteria Quickly:** The active filters help you "shuffle" the deck and bring the exact card you need to the top.
+- **Learn Contextually:** Discover how different concepts are related by combining filters and seeing which criteria apply across multiple categories.
 It’s designed to help you catch the right success criteria at the moment you need them most, making your accessibility workflow faster and more efficient.
 
 ## 🗂️ The WCAG Cards
@@ -33,10 +33,10 @@ It’s designed to help you catch the right success criteria at the moment you n
 The WCAG Cards section is the heart of the Pokédex—a complete, organized library of every success criterion.
 This is your go-to reference when you need to find a specific guideline or want to explore the guidelines in a structured way. The cards are organized according to the four foundational principles of accessibility, each with its own thematic color:
 
-- 🟥 Perceivable: Can users perceive the content?
-- 🟦 Operable: Can users operate the interface?
-- 🟩 Understandable: Can users understand the content and interface?
-- 🟨 Robust: Is the content robust enough to be interpreted by a wide variety of user agents, including assistive technologies?
+- 🟥 **Perceivable:** Can users perceive the content?
+- 🟦 **Operable:** Can users operate the interface?
+- 🟩 **Understandable:** Can users understand the content and interface?
+- 🟨 **Robust:** Is the content robust enough to be interpreted by a wide variety of user agents, including assistive technologies?
 
 Each principle's section contains a card for every one of its success criteria, laid out in a clean, browsable grid. It’s a visual and intuitive way to see how the guidelines fit together.
 
@@ -44,9 +44,9 @@ Each principle's section contains a card for every one of its success criteria, 
 
 The metaphor is simple: in the world of web development, accessibility guidelines are the essential knowledge you need to collect.
 
-- "Gotta Catch 'Em All!": The phrase perfectly captures the goal of becoming familiar with every guideline to ensure no user is left behind.
-- Learning & Mastery: Each "card" you view is a step towards understanding a concept. "Mastering" it means knowing how to apply it in your work.
-- Fun & Engaging: By wrapping serious, technical standards in a fun, nostalgic theme, we can lower the barrier to entry and make the learning process more enjoyable.
+- **"Gotta Catch 'Em All!":** The phrase perfectly captures the goal of becoming familiar with every guideline to ensure no user is left behind.
+- **Learning & Mastery:** Each "card" you view is a step towards understanding a concept. "Mastering" it means knowing how to apply it in your work.
+- **Fun & Engaging:** By wrapping serious, technical standards in a fun, nostalgic theme, we can lower the barrier to entry and make the learning process more enjoyable.
 
 This project is a tribute to the idea that learning vital skills doesn't have to be a chore.
 
